@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140120073253) do
+ActiveRecord::Schema.define(version: 20140120082341) do
 
   create_table "songs", force: true do |t|
     t.string "title"
@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(version: 20140120073253) do
     t.string "bpm"
     t.string "ucs_id"
     t.string "delay"
+  end
+
+  create_table "steps", force: true do |t|
+    t.integer "user_id"
+    t.integer "song_id"
+    t.string  "video_url"
+    t.string  "attachment"
   end
 
 end
