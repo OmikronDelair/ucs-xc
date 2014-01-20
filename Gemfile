@@ -13,6 +13,7 @@ gem 'haml'
 gem 'decent_exposure'
 gem 'carrierwave'
 gem 'activerecord-postgres-hstore'
+gem 'pry'
 
 group :doc do
   gem 'sdoc', require: false
