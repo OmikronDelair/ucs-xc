@@ -1,0 +1,11 @@
+= form_for step, html: { multipart: true } do |f|
+  = f.label :song_id, 'Song'
+  = f.collection_select :song_id, songs, :id, :title
+  %br
+  = f.label :video_url, 'YouTube URL'
+  = f.text_field :video_url
+  %br
+  = f.label :attachment, 'UCS File'
+  = f.file_field :attachment
+  %br
+  = f.submit

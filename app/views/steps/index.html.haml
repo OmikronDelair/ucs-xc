@@ -1,0 +1,8 @@
+%h1 Steps
+=link_to "New stepchart", new_step_path
+%br
+- steps.each do |step|
+  = step.song.title
+  = link_to 'UCS File', step_download_path(step.id), target: '_blank'
+  = link_to 'Edit', edit_step_path(step.id)
+  = link_to 'Destroy', step_path(step.id), method: :delete
