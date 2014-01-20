@@ -1,0 +1,8 @@
+%h1 Songs
+=link_to "New song", new_song_path
+%br
+- songs.each do |song|
+  = song.title
+  = link_to 'Edit', edit_song_path(song.id)
+  = link_to 'Destroy', song_path(song.id), method: :delete
+  %br
