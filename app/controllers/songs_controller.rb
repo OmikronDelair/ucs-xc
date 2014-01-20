@@ -21,7 +21,7 @@ class SongsController < ApplicationController
     end
   end
 
-  def edif
+  def edit
   end
 
   def update
