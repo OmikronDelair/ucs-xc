@@ -1,4 +1,5 @@
 class SongsController < ApplicationController
+  include GfxLists
   expose :song, attributes: :song_params
   expose :songs
 
@@ -49,5 +50,4 @@ class SongsController < ApplicationController
   def song_params
     params.require(:song).permit(:title,:artist,:bpm,:delay,:ucs_id)
   end
-
 end

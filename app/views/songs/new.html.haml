@@ -1,2 +1,9 @@
-%h1 New Song 
-= render 'form'
+%header{ style: "padding: 22px 0; background-image: url('..#{image_path('headers/' << @headers.sample)}');" }
+  .row
+    .large-12.columns
+      %h1 Add Song
+      %h4 Set song information
+%section{ style: 'margin-top: 44px' }
+  .row
+    .large-8.columns
+      = render 'form'

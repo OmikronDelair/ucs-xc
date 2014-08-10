@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>UcsXc</title>
+  <title>UCS Exchange Central</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav>
-    <ul>
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><%= link_to 'UCS Exchange Central', root_path %></h1>
+      </li>
+    </ul>
+    <section class="top-bar-section">
+    <ul class="right">
+      <li class="divider"></li>
       <li><%= link_to 'Songs', songs_path %></li>
+      <li class="divider"></li>
       <li><%= link_to 'Steps', steps_path %></li>
     </ul>
+    </section>
   </nav>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>

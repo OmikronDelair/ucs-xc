@@ -1,8 +1,22 @@
-%h1 Songs
-=link_to "New song", new_song_path
-%br
-- songs.each do |song|
-  = song.title
-  = link_to 'Edit', edit_song_path(song.id)
-  = link_to 'Destroy', song_path(song.id), method: :delete
-  %br
+%header{ style: "padding: 22px 0; background-image: url('..#{image_path('headers/' << @headers.sample)}');" }
+  .row
+    .large-12.columns
+      %h1 Songs
+      %h4 Stepmakeable song list
+%section{ style: 'margin-top: 44px' }
+  .row
+    .large-8.columns
+      - songs.each do |song|
+        .large-8.columns
+          = song.title
+          %span{ style: 'display: block; font-size: small;' }by #{song.artist}
+        .large-4.columns
+          .button-bar
+            %ul{class: 'button-group round'}
+              %li
+                = link_to 'Edit', edit_song_path(song.id), class: 'tiny button secondary'
+              %li
+                = link_to 'Destroy', song_path(song.id), method: :delete, class: 'tiny button alert'
+        %br
+        %hr
+      =link_to "Add song", new_song_path, class: 'button [radius round]'

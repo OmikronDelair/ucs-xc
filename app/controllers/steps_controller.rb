@@ -1,4 +1,5 @@
 class StepsController < ApplicationController
+  include GfxLists
   expose(:step, attributes: :step_params)
   expose(:steps)
   expose(:songs)
