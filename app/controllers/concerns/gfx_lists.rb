@@ -9,7 +9,6 @@ module GfxLists
 
   def get_headers
     @headers = Array.new
-    Dir.foreach('app/assets/images/headers') {|x| @headers << x}
-    @headers.shift(2)
+    Dir.foreach('app/assets/images/headers/') {|x| @headers << x unless (x=="."||x=="..")}
   end
 end
